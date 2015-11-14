@@ -1,7 +1,7 @@
 <?php
 
 $s = 'public.';
-Route::get('/',         ['as' => $s . 'home',   'uses' => 'PagesController@getHome']);
+//Route::get('/',         ['as' => $s . 'home',   'uses' => 'PagesController@getHome']);
 
 $a = 'auth.';
 Route::get('/login',            ['as' => $a . 'login',          'uses' => 'Auth\AuthController@getLogin']);
@@ -39,6 +39,7 @@ Route::group(['middleware' => 'auth:all'], function()
 
 // Blog pages
 get('/blog', function () {
+    Flash::message('Welcome Aboard!');
     return redirect('/blog');
 });
 get('blog', 'BlogController@index');

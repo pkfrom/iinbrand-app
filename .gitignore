@@ -3,3 +3,5 @@
 /node_modules
 Homestead.yaml
 .env
+.env.production
+composer.lock

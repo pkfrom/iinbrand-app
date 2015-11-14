@@ -148,6 +148,11 @@ return [
         Laravel\Socialite\SocialiteServiceProvider::class,
         Fromz\L5scaffold\GeneratorsServiceProvider::class,
         Pingpong\Modules\ModulesServiceProvider::class,
+        Laravelista\Ekko\EkkoServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
+
+        //Collective\Html\HtmlServiceProvider::class,
+        //Zizaco\Entrust\EntrustServiceProvider::class,
 
 
     ],
@@ -201,6 +206,12 @@ return [
         'HTML'      => Illuminate\Html\HtmlFacade::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Module'    => Pingpong\Modules\Facades\Module::class,
+        'Ekko'      => Laravelista\Ekko\Facades\Ekko::class,
+        'Flash'     => Laracasts\Flash\Flash::class,
+
+        //'Form' => Collective\Html\FormFacade::class,
+        //'Html' => Collective\Html\HtmlFacade::class,
+        //'Entrust' => 'Zizaco\Entrust\EntrustFacade'
 
     ],
 

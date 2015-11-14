@@ -1,26 +1,22 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
-    "license": "MIT",
-    "type": "project",
-    "require": {
-        "php": ">=5.5.9",
+"name": "laravel/laravel",
+  "description": "The Laravel Framework.",
+  "keywords": ["framework", "laravel"],
+  "license": "MIT",
+  "type": "project",
+  "require": {
+    "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
         "illuminate/html": "5.*",
         "laravel/socialite": "^2.0",
         "google/recaptcha": "~1.1",
-        
         "fromz/l5scaffold": "dev-master",
         "pingpong/modules": "~2.1",
 
-        "michelf/php-markdown": "^1.5",
-        "michelf/php-smartypants": "1.6.0-beta1",
-        "dflydev/apache-mime-types": "^1.0",
-        "league/flysystem-aws-s3-v3": "^1.0",
-        "doctrine/dbal": "^2.5",
-        "guzzlehttp/guzzle": "~5.0",
-        "suin/php-rss-writer": "^1.3"
+        "cartalyst/sentinel": "2.0.*",
+        "laracasts/flash": "~1.3",
+        "laravelista/ekko": "~1.0",
+        "zizaco/entrust": "dev-laravel-5"
     },
         "repositories": [
         {
