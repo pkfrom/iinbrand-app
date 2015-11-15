@@ -4,166 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "aea09200c1074ba94efd3b8c5571704d",
-    "content-hash": "0eb7ce770bf9dbc17e4acd7eb50bf93d",
+    "hash": "e9ee6e90fc6afaaee2743175c8a6ed61",
+    "content-hash": "218440ce6f33975622caa652acdee51e",
     "packages": [
-        {
-            "name": "cartalyst/sentinel",
-            "version": "v2.0.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cartalyst/sentinel.git",
-                "reference": "ff4a3c0100474dd135e7732b379962715f6d6b03"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cartalyst/sentinel/zipball/ff4a3c0100474dd135e7732b379962715f6d6b03",
-                "reference": "ff4a3c0100474dd135e7732b379962715f6d6b03",
-                "shasum": ""
-            },
-            "require": {
-                "cartalyst/support": "~1.0",
-                "illuminate/support": "~5.0",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "illuminate/cookie": "~5.0",
-                "illuminate/database": "~5.0",
-                "illuminate/http": "~5.0",
-                "illuminate/session": "~5.0",
-                "ircmaxell/password-compat": "~1.0",
-                "mockery/mockery": "~0.9",
-                "phpunit/phpunit": "~4.0"
-            },
-            "suggest": {
-                "illuminate/database": "By default, Sentinel utilizes the powerful Illuminate database layer.",
-                "illuminate/events": "To hook into various events across Sentinel, we recommend using Illuminate's event dispatcher.",
-                "ircmaxell/password-compat": "Default hashing uses PHP 5.5 password_* functions, with forward-compatible support.",
-                "symfony/http-foundation": "Required for native implementations."
-            },
-            "type": "library",
-            "extra": {
-                "component": "package",
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Cartalyst\\Sentinel\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Ben Corlett",
-                    "email": "ben.corlett@cartalyst.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Cartalyst LLC",
-                    "email": "help@cartalyst.com"
-                },
-                {
-                    "name": "Bruno Gaspar",
-                    "email": "bruno.gaspar@cartalyst.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Dan Syme",
-                    "email": "dan.syme@cartalyst.com",
-                    "role": "Creator & Designer"
-                },
-                {
-                    "name": "Suhayb Wardany",
-                    "email": "su.wardany@cartalyst.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "PHP 5.4+ Fully-featured Authentication & Authorization System",
-            "keywords": [
-                "auth",
-                "cartalyst",
-                "codeigniter",
-                "fuelphp",
-                "laravel",
-                "php",
-                "security"
-            ],
-            "time": "2015-08-26 18:31:52"
-        },
-        {
-            "name": "cartalyst/support",
-            "version": "v1.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cartalyst/support.git",
-                "reference": "c90931d25e89734ba89875a769af6b2e050593a5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cartalyst/support/zipball/c90931d25e89734ba89875a769af6b2e050593a5",
-                "reference": "c90931d25e89734ba89875a769af6b2e050593a5",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "illuminate/mail": "~4.1|~5.0",
-                "illuminate/validation": "~4.1|~5.0",
-                "mockery/mockery": "~0.9",
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "library",
-            "extra": {
-                "component": "package",
-                "branch-alias": {
-                    "dev-master": "1.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Cartalyst\\Support\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Cartalyst LLC",
-                    "email": "help@cartalyst.com"
-                },
-                {
-                    "name": "Bruno Gaspar",
-                    "email": "bruno.gaspar@cartalyst.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Dan Syme",
-                    "email": "dan.syme@cartalyst.com",
-                    "role": "Project Lead"
-                },
-                {
-                    "name": "Suhayb Wardany",
-                    "email": "su.wardany@cartalyst.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Support helpers.",
-            "keywords": [
-                "cartalyst",
-                "helper",
-                "laravel",
-                "support"
-            ],
-            "time": "2015-06-24 13:00:53"
-        },
         {
             "name": "classpreloader/classpreloader",
             "version": "3.0.0",
@@ -777,101 +620,12 @@
             "time": "2014-09-09 13:34:57"
         },
         {
-            "name": "erusev/parsedown",
-            "version": "1.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/erusev/parsedown.git",
-                "reference": "3ebbd730b5c2cf5ce78bc1bf64071407fc6674b7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/erusev/parsedown/zipball/3ebbd730b5c2cf5ce78bc1bf64071407fc6674b7",
-                "reference": "3ebbd730b5c2cf5ce78bc1bf64071407fc6674b7",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Parsedown": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Emanuil Rusev",
-                    "email": "hello@erusev.com",
-                    "homepage": "http://erusev.com"
-                }
-            ],
-            "description": "Parser for Markdown.",
-            "homepage": "http://parsedown.org",
-            "keywords": [
-                "markdown",
-                "parser"
-            ],
-            "time": "2015-10-04 16:44:32"
-        },
-        {
-            "name": "erusev/parsedown-extra",
-            "version": "0.7.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/erusev/parsedown-extra.git",
-                "reference": "11a44e076d02ffcc4021713398a60cd73f78b6f5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/erusev/parsedown-extra/zipball/11a44e076d02ffcc4021713398a60cd73f78b6f5",
-                "reference": "11a44e076d02ffcc4021713398a60cd73f78b6f5",
-                "shasum": ""
-            },
-            "require": {
-                "erusev/parsedown": "~1.4"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "ParsedownExtra": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Emanuil Rusev",
-                    "email": "hello@erusev.com",
-                    "homepage": "http://erusev.com"
-                }
-            ],
-            "description": "An extension of Parsedown that adds support for Markdown Extra.",
-            "homepage": "https://github.com/erusev/parsedown-extra",
-            "keywords": [
-                "markdown",
-                "markdown extra",
-                "parsedown",
-                "parser"
-            ],
-            "time": "2015-01-25 14:52:34"
-        },
-        {
             "name": "fromz/l5scaffold",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/pkfrom/l5-scaffold.git",
-                "reference": "26466c26e5f6ed135ae3844b3092dc1fc8b74f83"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/pkfrom/l5-scaffold/zipball/26466c26e5f6ed135ae3844b3092dc1fc8b74f83",
-                "reference": "26466c26e5f6ed135ae3844b3092dc1fc8b74f83",
-                "shasum": ""
+                "url": "git@bitbucket.org:pkfrom/l5-scaffold.git",
+                "reference": "0969ddf3c773efcb3daab2d912fdde2f8752dff7"
             },
             "require": {
                 "illuminate/support": "~5.0",
@@ -893,11 +647,7 @@
                 }
             ],
             "description": "Extend Laravel 5 generators scaffold.",
-            "support": {
-                "source": "https://github.com/pkfrom/l5-scaffold/tree/master",
-                "issues": "https://github.com/pkfrom/l5-scaffold/issues"
-            },
-            "time": "2015-11-11 22:12:30"
+            "time": "2015-11-03 07:24:14"
         },
         {
             "name": "google/recaptcha",
@@ -1209,52 +959,6 @@
                 "uri"
             ],
             "time": "2015-11-03 01:34:55"
-        },
-        {
-            "name": "illuminate/html",
-            "version": "v5.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/illuminate/html.git",
-                "reference": "3d1009bb8e0f25720c914af5c1f4015dd373c9ef"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/html/zipball/3d1009bb8e0f25720c914af5c1f4015dd373c9ef",
-                "reference": "3d1009bb8e0f25720c914af5c1f4015dd373c9ef",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/http": "~5.0",
-                "illuminate/session": "~5.0",
-                "illuminate/support": "~5.0",
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Illuminate\\Html\\": ""
-                },
-                "files": [
-                    "helpers.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com"
-                }
-            ],
-            "time": "2015-01-01 16:31:18"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -2129,132 +1833,43 @@
             "time": "2015-11-10 00:45:41"
         },
         {
-            "name": "pingpong/generators",
-            "version": "v2.1.4",
+            "name": "pingpong/sky",
+            "version": "v2.1.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/pingpong-labs/generators.git",
-                "reference": "bbf756b633da361f99af52bcf5620f671c86e3a1"
+                "url": "https://github.com/pingpong-labs/sky.git",
+                "reference": "afd1e35b8ba6100c5c896e49e8aca6144194255d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pingpong-labs/generators/zipball/bbf756b633da361f99af52bcf5620f671c86e3a1",
-                "reference": "bbf756b633da361f99af52bcf5620f671c86e3a1",
+                "url": "https://api.github.com/repos/pingpong-labs/sky/zipball/afd1e35b8ba6100c5c896e49e8aca6144194255d",
+                "reference": "afd1e35b8ba6100c5c896e49e8aca6144194255d",
                 "shasum": ""
             },
             "require": {
                 "doctrine/dbal": "~2.5",
-                "illuminate/filesystem": "5.1.*",
-                "illuminate/support": "5.1.*",
-                "php": ">=5.4.0",
-                "pingpong/support": "2.1.*"
-            },
-            "require-dev": {
-                "mockery/mockery": "~0.9",
-                "phpunit/phpunit": "~4"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Pingpong\\Generators\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Pingpong Labs",
-                    "email": "pingpong.labs@gmail.com"
-                }
-            ],
-            "description": "Laravel Generators",
-            "keywords": [
-                "generators",
-                "laravel",
-                "pingpong"
-            ],
-            "time": "2015-07-02 04:19:47"
-        },
-        {
-            "name": "pingpong/modules",
-            "version": "v2.1.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/pingpong-labs/modules.git",
-                "reference": "cc2b4bdcd528f992d0ed27369f0c4b6523bf988a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/pingpong-labs/modules/zipball/cc2b4bdcd528f992d0ed27369f0c4b6523bf988a",
-                "reference": "cc2b4bdcd528f992d0ed27369f0c4b6523bf988a",
-                "shasum": ""
-            },
-            "require": {
                 "laravel/framework": "5.1.*",
                 "laravelcollective/html": "~5.0",
-                "php": ">=5.4.0",
-                "pingpong/generators": "2.1.*",
-                "pingpong/support": "2.1.*"
+                "php": ">=5.4.0"
             },
             "require-dev": {
                 "mockery/mockery": "~0.9",
-                "phpunit/phpunit": "~4"
+                "phpunit/phpunit": "~4",
+                "pingpong/testing": "2.1.*"
+            },
+            "suggest": {
+                "erusev/parsedown-extra": "Required for markdown helper."
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Pingpong\\Modules\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Pingpong Labs",
-                    "email": "pingpong.labs@gmail.com"
-                }
-            ],
-            "description": "Laravel Modules",
-            "keywords": [
-                "hmvc",
-                "laravel",
-                "module",
-                "modules",
-                "pingpong"
-            ],
-            "time": "2015-11-06 06:53:58"
-        },
-        {
-            "name": "pingpong/support",
-            "version": "v2.1.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/pingpong-labs/support.git",
-                "reference": "3f8054be7811ba837d2917d7c58933dcede0dfe3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/pingpong-labs/support/zipball/3f8054be7811ba837d2917d7c58933dcede0dfe3",
-                "reference": "3f8054be7811ba837d2917d7c58933dcede0dfe3",
-                "shasum": ""
-            },
-            "require": {
-                "erusev/parsedown-extra": "0.7.*",
-                "illuminate/filesystem": "5.1.*",
-                "illuminate/support": "5.1.*",
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Pingpong\\Support\\": ""
+                    "Pingpong\\": "src/Pingpong"
                 },
+                "classmap": [
+                    "tests/PingpongTestCase.php"
+                ],
                 "files": [
-                    "helpers.php"
+                    "src/Pingpong/Support/helpers.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2267,8 +1882,9 @@
                     "email": "pingpong.labs@gmail.com"
                 }
             ],
-            "description": "Support Component of Pingpong Sky Package",
-            "time": "2015-08-07 09:18:50"
+            "description": "An Extra Laravel Component",
+            "homepage": "http://sky.pingpong-labs.com",
+            "time": "2015-07-17 19:10:27"
         },
         {
             "name": "psr/http-message",
@@ -3205,73 +2821,6 @@
                 "environment"
             ],
             "time": "2015-05-30 15:59:26"
-        },
-        {
-            "name": "zizaco/entrust",
-            "version": "dev-laravel-5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Zizaco/entrust.git",
-                "reference": "be28aa634c44551ae5187894c903094a8ce8baee"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Zizaco/entrust/zipball/be28aa634c44551ae5187894c903094a8ce8baee",
-                "reference": "be28aa634c44551ae5187894c903094a8ce8baee",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/console": "~5.0",
-                "illuminate/support": "~5.0",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "illuminate/database": "~5.0",
-                "mockery/mockery": "dev-master",
-                "phpunit/phpunit": "~4.1",
-                "sami/sami": "dev-master"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "src/commands"
-                ],
-                "psr-4": {
-                    "Zizaco\\Entrust\\": "src/Entrust/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andrew Elkins",
-                    "homepage": "http://andrewelkins.com"
-                },
-                {
-                    "name": "Zizaco Zizuini",
-                    "email": "zizaco@gmail.com"
-                },
-                {
-                    "name": "Ben Batschelet",
-                    "homepage": "http://github.com/bbatsche"
-                },
-                {
-                    "name": "Michele Angioni",
-                    "email": "michele.angioni@gmail.com"
-                }
-            ],
-            "description": "This package provides a flexible way to add Role-based Permissions to Laravel",
-            "keywords": [
-                "acl",
-                "auth",
-                "illuminate",
-                "laravel",
-                "permission",
-                "roles"
-            ],
-            "time": "2015-11-12 17:38:37"
         }
     ],
     "packages-dev": [
@@ -4500,8 +4049,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "fromz/l5scaffold": 20,
-        "zizaco/entrust": 20
+        "fromz/l5scaffold": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

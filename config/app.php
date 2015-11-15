@@ -144,15 +144,13 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        Illuminate\Html\HtmlServiceProvider::class,
+        //Illuminate\Html\HtmlServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
         Fromz\L5scaffold\GeneratorsServiceProvider::class,
         Pingpong\Modules\ModulesServiceProvider::class,
         Laravelista\Ekko\EkkoServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
-
-        //Collective\Html\HtmlServiceProvider::class,
-        //Zizaco\Entrust\EntrustServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
 
 
     ],
@@ -202,16 +200,16 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
-        'Form'      => Illuminate\Html\FormFacade::class,
-        'HTML'      => Illuminate\Html\HtmlFacade::class,
+        //'Form'      => Illuminate\Html\FormFacade::class,
+        //'HTML'      => Illuminate\Html\HtmlFacade::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
+        'HTML' => Collective\Html\HtmlFacade::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Module'    => Pingpong\Modules\Facades\Module::class,
         'Ekko'      => Laravelista\Ekko\Facades\Ekko::class,
         'Flash'     => Laracasts\Flash\Flash::class,
 
-        //'Form' => Collective\Html\FormFacade::class,
-        //'Html' => Collective\Html\HtmlFacade::class,
-        //'Entrust' => 'Zizaco\Entrust\EntrustFacade'
 
     ],
 
