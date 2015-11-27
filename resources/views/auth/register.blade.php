@@ -5,6 +5,10 @@
     {!! HTML::style('/assets/css/parsley.css') !!}
 @stop
 
+@section('action-menu')
+    <li><a href="{{ route('auth.login') }}">Login</a></li>
+@endsection
+
 @section('content')
 
         {!! Form::open(['url' => route('auth.register-post'), 'class' => 'form-signin', 'data-parsley-validate' ] ) !!}

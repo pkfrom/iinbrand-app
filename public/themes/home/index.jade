@@ -1,0 +1,115 @@
+doctype
+html
+  head
+    meta(charset="utf-8")
+    title {{config('themes.title')}}
+    meta(property="og:image", content="{{asset('themes/home/img/banner.jpg')}}")
+    link(rel="stylesheet", href="{{asset('themes/home/css/normalize.min.css')}}")
+    link(rel="stylesheet", href="{{asset('themes/home/css/main.min.css')}}")
+    link(rel="shortcut icon" href="favicon.png")
+    script(src="{{asset('themes/home/js/vendor/modernizr-2.7.1.min.js')}}")
+  body
+    header
+      .center
+        .left
+          a(href="#").logo
+          .title iinbrand
+          .slogan Protect you Brand<br>Happy Client & Brand owner.
+          .buttons
+            a(href="#HOWTOWORK") How to work
+            a(href="#") Get Started
+          .release-info released note |
+            a(href="#", target="_blank") Changelog
+          .links
+            a(href="#") Docs
+            a(href="#") Forum
+            a(href="#") Examples
+            a(href="#") Demo Apps
+        .phone
+          iframe(src="https://api.iinbrand.com/scan/", frameborder="0", scrolling="no")
+          .statusbar
+          .theme-switch
+            a(href="https://api.iinbrand.com/scan/", target="_blank").active
+              .theme-icon
+                .logo-apple
+                span iOS 
+              .fullscreen
+                i
+                span Fullscreen<br>Preview
+            a(href="https://api.iinbrand.com/scan/", target="_blank")
+              .theme-icon
+                .logo-android
+                span Android
+              .fullscreen
+                i
+                span Fullscreen<br>Preview
+
+    .share-line
+      .center 
+        .share
+          | <!-- AddThis Button BEGIN -->
+          | <div class="addthis_toolbox addthis_default_style ">
+          | </div>
+          | <!-- AddThis Button END -->
+        .clearfix
+    .content.center
+      .home-block.home-killer(id="HOWTOWORK")
+        h2 How to work
+        .tab-links
+          a(href="#").active Get start
+          a(href="#") Launch
+          a(href="#") Scan
+          a(href="#") Results
+        .tabs
+          .tab.active
+            .pic
+              img(src="{{asset('themes/home/img/feats/start.png')}}",style="width:320px;height:auto;border: 1px solid #aaa;")
+            .text
+              h3 Get start
+              p Download application iinbrand from Appstore or PlayStore. if mobile your not iOS & Android you can open Browser and Launch Application. Got it free!
+          .tab
+            .pic
+              img(src="{{asset('themes/home/img/feats/home.png')}}",style="width:320px;height:auto;border: 1px solid #aaa;")
+            .text
+              h3 Launch
+              p Open application iinbrand and Pass button logo to Scan
+          .tab
+            .pic
+              img(src="{{asset('themes/home/img/feats/scan-sq-pic2.png')}}", style="width:320px;height:auto;border: 1px solid #aaa;")
+            .text
+              h3 Scan
+              p Scan to the Product.
+          .tab
+            .pic
+              img(src="{{asset('themes/home/img/feats/result-yes2.png')}}",style="width:320px;height:auto;border: 1px solid #aaa;")
+            .text
+              h3 Results
+              p See results Product and Detail
+          .tab
+            .pic
+              video(src="{{asset('themes/home/img/feats/messages.mp4')}}",loop video, autoplay)
+            .text
+              h3 Test Video
+              p ต้อง record screen มาประมาณ 15 วิ กำลังดีครับ
+    .share-line
+      .center 
+        .share
+          | <!-- AddThis Button BEGIN -->
+          | <div class="addthis_toolbox addthis_default_style ">
+          | </div>
+          | <!-- AddThis Button END -->
+        .clearfix
+    footer
+      .center
+        .links
+          a(href="https://iinbrand.com") iinbrand
+          a(href="https://iinbrand.com/go/fb") facebook
+          a(href="https://iinbrand.com/go/tw") twitter
+          a(href="https://iinb.ga/mail") contact
+        .copy 2015 © iinbrand
+
+    script(src="{{asset('themes/home/js/vendor/jquery-1.11.0.min.js')}}")
+    script(src="{{asset('themes/home/js/plugins.min.js')}}")
+    script(src="{{asset('themes/home/js/main.min.js')}}")
+
+    

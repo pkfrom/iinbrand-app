@@ -13,19 +13,21 @@ Route::post('/password',        ['as' => $a . 'password-post',  'uses' => 'Auth\
 Route::get('/password/{token}', ['as' => $a . 'reset',          'uses' => 'Auth\PasswordResetController@getPasswordResetForm']);
 Route::post('/password/{token}',['as' => $a . 'reset-post',     'uses' => 'Auth\PasswordResetController@postPasswordResetForm']);
 
+
 $s = 'social.';
 Route::get('/social/redirect/{provider}',   ['as' => $s . 'redirect',   'uses' => 'Auth\AuthController@getSocialRedirect']);
 Route::get('/social/handle/{provider}',     ['as' => $s . 'handle',     'uses' => 'Auth\AuthController@getSocialHandle']);
 
+
 Route::group(['prefix' => 'admin', 'middleware' => 'auth:administrator'], function()
 {
-    $a = 'admin.';
+$a = 'admin.';
     Route::get('/', ['as' => $a . 'home', 'uses' => 'AdminController@getHome']);
 });
 
 Route::group(['prefix' => 'user', 'middleware' => 'auth:user'], function()
 {
-    $a = 'user.';
+$a = 'user.';
     Route::get('/', ['as' => $a . 'home', 'uses' => 'UserController@getHome']);
 });
 
@@ -35,19 +37,21 @@ Route::group(['middleware' => 'auth:all'], function()
     Route::get('/logout', ['as' => $a . 'logout', 'uses' => 'Auth\AuthController@getLogout']);
 });
 
+Route::resource('/dashboards', 'DashboardController');
+Route::get('/dashboards/map', 'DashboardController@getMap');
 
 
 // Blog pages
-get('/blog', function () {
+Route::group(['prefix' => 'blog'], function(){
     Flash::message('Welcome Aboard!');
-    return redirect('/blog');
+    Route::get('/', 'BlogController@index');
+    Route::get('/{slug}', 'BlogController@showPost');
+    Route::get('contact', 'ContactController@showForm');
+    Route::post('contact', 'ContactController@sendContactInfo');
+    Route::get('rss', 'BlogController@rss');
+    Route::get('sitemap.xml', 'BlogController@siteMap');
 });
-get('blog', 'BlogController@index');
-get('blog/{slug}', 'BlogController@showPost');
-$router->get('contact', 'ContactController@showForm');
-Route::post('contact', 'ContactController@sendContactInfo');
-get('rss', 'BlogController@rss');
-get('sitemap.xml', 'BlogController@siteMap');
+
 
 
 /*
@@ -73,3 +77,9 @@ $router->group([
 //post('/auth/login', 'Auth\AuthController@postLogin');
 //get('/auth/logout', 'Auth\AuthController@getLogout');
 */
+
+Route::get('/tt', function(){
+    echo "TTTT";
+});
+
+Route::resource('company', 'CompanyController');

@@ -4,6 +4,6 @@ class PagesController extends Controller {
 
     public function getHome()
     {
-        return view('pages.home');
+        return view('pages.index');
     }
 }

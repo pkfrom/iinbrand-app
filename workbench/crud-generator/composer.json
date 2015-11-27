@@ -1,0 +1,33 @@
+{
+    "name": "fromz/crud-generator",
+    "license": "MIT",
+    "description": "Laravel 5 CRUD Generator integrated with AdminLTE",
+    "keywords": [
+        "laravel",
+        "crud",
+        "crud generator",
+        "AdminLTE"
+    ],
+    "authors": [
+        {
+            "name": "Sohel Amin",
+            "email": "sohelamincse@gmail.com",
+            "homepage": "http://www.fromz.com"
+        },
+        {
+            "name": "Aleksander Cynarski",
+            "email": "paramah@pretasoft.pl",
+            "homepage": "http://www.pretasoft.pl"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/support": "5.1.*",
+        "laravelcollective/html": "5.1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fromz\\CrudGenerator\\": "src/"
+        }
+    }
+}

@@ -1,0 +1,18 @@
+// php artisan mitul.generator:scaffold Company --fieldsFile="database/fields/company.json"
+[
+    {
+        "field":"code:string",
+        "type":"text",
+        "validations": ""
+    },
+    {
+        "field":"name:text",
+        "type":"text",
+        "validations": "required"
+    },
+    {
+        "field":"active:boolean",
+        "type":"radio",
+        "validations": ""
+    }
+]

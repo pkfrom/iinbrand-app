@@ -151,6 +151,10 @@ return [
         Laravelista\Ekko\EkkoServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        Fromz\CrudGenerator\CrudGeneratorServiceProvider::class,
+        Fromz\LaravelAdminLte\ServiceProvider::class,
+        Mitul\Generator\GeneratorServiceProvider::class,
+        Pingpong\Generators\GeneratorsServiceProvider::class,
 
 
     ],
@@ -202,9 +206,9 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
         //'Form'      => Illuminate\Html\FormFacade::class,
         //'HTML'      => Illuminate\Html\HtmlFacade::class,
-        'Form' => Collective\Html\FormFacade::class,
-        'Html' => Collective\Html\HtmlFacade::class,
-        'HTML' => Collective\Html\HtmlFacade::class,
+        'Form'      => Collective\Html\FormFacade::class,
+        'Html'      => Collective\Html\HtmlFacade::class,
+        'HTML'      => Collective\Html\HtmlFacade::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Module'    => Pingpong\Modules\Facades\Module::class,
         'Ekko'      => Laravelista\Ekko\Facades\Ekko::class,

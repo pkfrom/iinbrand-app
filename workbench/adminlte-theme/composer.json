@@ -1,0 +1,21 @@
+{
+  "name": "fromz/laravel-adminlte",
+  "description": "AdminLTE",
+  "keywords": ["laravel", "adminlte", "admin", "administrator"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Fromz Prajuktar",
+      "email": "pkfromz@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Fromz\\LaravelAdminLte\\": "src/"
+    }
+  },
+  "require": {
+    "illuminate/support": "^5.1"
+  },
+  	"minimum-stability": "dev"
+}

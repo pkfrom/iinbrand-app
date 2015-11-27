@@ -5,6 +5,10 @@
     {!! HTML::style('/assets/css/parsley.css') !!}
 @stop
 
+@section('action-menu')
+    <li><a href="{{ route('auth.register') }}">Register</a></li>
+@endsection
+
 @section('content')
 
 
