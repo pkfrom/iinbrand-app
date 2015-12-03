@@ -36,7 +36,8 @@ class RedirectIfAuthenticated
     {
         if ($this->auth->check()) {
             //return redirect('/home');
-            return redirect('/admin/post');
+            //return redirect('/admin/post');
+            return redirect('/');
         }
 
         return $next($request);

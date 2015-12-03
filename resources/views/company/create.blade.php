@@ -20,10 +20,11 @@
                     </div><div class="form-group">
                         {!! Form::label('active', 'Active: ', ['class' => 'col-sm-3 control-label']) !!}
                         <div class="col-sm-6">
-                            {!! Form::radio('active', '1', ['class' => 'form-control']) !!}Yes
                             {!! Form::radio('active', '0', ['class' => 'form-control']) !!}No
+                            {!! Form::radio('active', '1', ['class' => 'form-control']) !!}Yes
 
-                            {{!! Form::radio('name', 'value', true); !!}}
+
+
                         </div>
                     </div>
 

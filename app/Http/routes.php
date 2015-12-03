@@ -40,21 +40,23 @@ Route::group(['middleware' => 'auth:all'], function()
 Route::resource('/dashboards', 'DashboardController');
 Route::get('/dashboards/map', 'DashboardController@getMap');
 
-
+/*
 // Blog pages
-Route::group(['prefix' => 'blog'], function(){
+Route::get('/blog', function(){
     Flash::message('Welcome Aboard!');
     Route::get('/', 'BlogController@index');
+});
+
     Route::get('/{slug}', 'BlogController@showPost');
     Route::get('contact', 'ContactController@showForm');
     Route::post('contact', 'ContactController@sendContactInfo');
-    Route::get('rss', 'BlogController@rss');
+    Route::get('rss',['as' => 'rss', 'uses' => 'BlogController@rss']);
     Route::get('sitemap.xml', 'BlogController@siteMap');
-});
 
 
 
-/*
+
+
 // Admin area
 get('admin', function () {
     return redirect('/admin/post');
@@ -78,8 +80,14 @@ $router->group([
 //get('/auth/logout', 'Auth\AuthController@getLogout');
 */
 
-Route::get('/tt', function(){
-    echo "TTTT";
-});
+//Route::get('/geo', function(){
+
+//});
+
+
 
 Route::resource('company', 'CompanyController');
+
+Route::get('/geo', 'GeoController@index');
+
+Route::get('/scan', 'ScanController@index');

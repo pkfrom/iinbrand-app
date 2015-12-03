@@ -9,7 +9,7 @@
         <table class="table table-bordered table-striped table-hover">
             <thead>
                 <tr>
-                    <th>S.No</th><th>Name</th><th>Detail</th><th>Active</th><th>Actions</th>
+                    <th>No.</th><th>Name</th><th>Detail</th><th>Active</th><th>Actions</th>
                 </tr>
             </thead>
             <tbody>

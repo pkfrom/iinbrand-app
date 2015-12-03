@@ -1,5 +1,9 @@
-# Laravel 5 CRUD Generator
-Laravel CRUD Generator
+# Laravel 5 CRUD Generator 
+Laravel CRUD Generator 
+
+- Modyfy Support AdminLTE by Fromz Prajuktar 
+
+Copy from [appzcoder/crud-generator](https://github.com/appzcoder/crud-generator)
 
 ### Requirements
     Laravel >=5.1
@@ -7,9 +11,19 @@ Laravel CRUD Generator
 
 ## Installation
 
-1. Run
+1. Add
+
     ```
-    composer require fromz/crud-generator
+      "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@bitbucket.org:pkfrom/l5-scaffold.git"
+    }
+    ...
+    ```
+
+    ```
+    "fromz/crud-generator": "dev-master",
     ```
 
 2. Add service provider to **/config/app.php** file.

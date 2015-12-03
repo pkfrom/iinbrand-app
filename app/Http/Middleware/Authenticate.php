@@ -51,7 +51,7 @@ class Authenticate
         {
             abort(403);
         }
-//Add Blog
+/*//Add Blog
         if ($this->auth->guest()) {
             if ($request->ajax()) {
                 return response('Unauthorized.', 401);
@@ -59,6 +59,7 @@ class Authenticate
                 return redirect()->guest('auth/login');
             }
         }
+*/
 
         return $next($request);
     }

@@ -20,7 +20,7 @@ class PostTableSeeder extends Seeder
         // Don't forget to truncate the pivot table
         DB::table('post_tag_pivot')->truncate();
 
-        factory(Post::class, 1)->create()->each(function ($post) use ($tags) {
+        factory(Post::class, 2)->create()->each(function ($post) use ($tags) {
 
             // 30% of the time don't assign a tag
             if (mt_rand(1, 100) <= 30) {

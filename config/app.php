@@ -95,7 +95,7 @@ return [
     |
     */
 
-    'log' => 'single',
+    'log' => env('APP_LOG', 'single'),
 
     /*
     |--------------------------------------------------------------------------
@@ -141,9 +141,9 @@ return [
          * Application Service Providers...
          */
         App\Providers\AppServiceProvider::class,
+        App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        Illuminate\View\ViewServiceProvider::class,
         //Illuminate\Html\HtmlServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
         Fromz\L5scaffold\GeneratorsServiceProvider::class,
@@ -154,7 +154,9 @@ return [
         Fromz\CrudGenerator\CrudGeneratorServiceProvider::class,
         Fromz\LaravelAdminLte\ServiceProvider::class,
         Mitul\Generator\GeneratorServiceProvider::class,
-        Pingpong\Generators\GeneratorsServiceProvider::class,
+        //Pingpong\Generators\GeneratorsServiceProvider::class
+        //PulkitJalan\GeoIP\GeoIPServiceProvider::class
+        //Pingpong\Trusty\TrustyServiceProvider::class,
 
 
     ],
@@ -185,9 +187,10 @@ return [
         'Eloquent'  => Illuminate\Database\Eloquent\Model::class,
         'Event'     => Illuminate\Support\Facades\Event::class,
         'File'      => Illuminate\Support\Facades\File::class,
+        'Gate'      => Illuminate\Support\Facades\Gate::class,
         'Hash'      => Illuminate\Support\Facades\Hash::class,
         'Input'     => Illuminate\Support\Facades\Input::class,
-        'Inspiring' => Illuminate\Foundation\Inspiring::class,
+        //'Inspiring' => Illuminate\Foundation\Inspiring::class,
         'Lang'      => Illuminate\Support\Facades\Lang::class,
         'Log'       => Illuminate\Support\Facades\Log::class,
         'Mail'      => Illuminate\Support\Facades\Mail::class,
@@ -213,6 +216,7 @@ return [
         'Module'    => Pingpong\Modules\Facades\Module::class,
         'Ekko'      => Laravelista\Ekko\Facades\Ekko::class,
         'Flash'     => Laracasts\Flash\Flash::class,
+        //'GeoIP'   => PulkitJalan\GeoIP\Facades\GeoIP::class
 
 
     ],
