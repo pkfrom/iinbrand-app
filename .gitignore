@@ -5,3 +5,6 @@ Homestead.yaml
 .env
 .env.production
 composer.lock
+/public/vendor/
+public/vendor/
+public/vendor

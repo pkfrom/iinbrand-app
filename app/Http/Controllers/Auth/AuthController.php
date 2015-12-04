@@ -142,7 +142,7 @@ class AuthController extends Controller {
                 //There is no combination of this social id and provider, so create new one
                 $newSocialUser = new User;
                 $newSocialUser->email              = $user->email;
-                $name = explode(' ', $user->name);
+                $name                              = explode(' ', $user->name);
                 $newSocialUser->first_name         = $name[0];
                 $newSocialUser->last_name          = $name[1];
                 $newSocialUser->save();

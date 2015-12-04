@@ -1,21 +1,53 @@
 {
-  "name": "l5beauty",
-  "description": "My awesome blog",
+  "name": "fromz/edc-system",
+  "description": "EDC System by iinbrand",
+  "main": "",
+  "authors": [
+    "Fromz Prajuktar <pkfromz@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://iinbrand.com",
   "ignore": [
     "**/.*",
     "node_modules",
+    "bower_components",
     "vendor/bower_dl",
     "test",
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.1.4",
+    "AdminLTE": "admin-lte#~2.3.2",
     "bootstrap": "~3.3.5",
-    "fontawesome": "~4.3.0",
-    "datatables": "~1.10.7",
+    "clean-blog": "~1.0.1",
     "datatables-plugins": "~1.10.7",
-    "selectize": "~0.12.1",
+    "datatables": "~1.10.10",
+    "fontawesome": "~4.3.0",
+    "microplugin": "0.0.x",
     "pickadate": "~3.5.6",
-    "clean-blog": "~1.0.1"
+    "select2": "~4.0.0",
+    "selectize": "~0.12.1",
+    "jquery": "~2.1.4",
+    "jquery-ui": "~1.11.4",
+    "datatables-bootstrap3": "*",
+    "knockout": "knockout.js#~3.1.0",
+    "knockout-mapping": "~2.4.1",
+    "knockout-sortable": "~0.11.0",
+    "underscore": "~1.8.3",
+    "jspdf": "~1.1.135",
+    "bootstrap-datepicker": "~1.5.0",
+    "accounting": "~0.3.2",
+    "jsoneditor": "~4.2.1",
+    "moment-timezone": "~0.4.1",
+    "quill": "~0.20.1",
+    "pdfmake": "~0.1.20",
+    "handsontable": "~0.20.1",
+    "d3": "~3.5.10",
+    "typeahead.js": "~0.11.1",
+    "spectrum": "~1.7.1",
+    "bootstrap-combobox": "~1.1.6",
+    "chart.js": "~0.1.0"
+  },
+  "resolutions": {
+    "jquery": "~2.1.4"
   }
 }

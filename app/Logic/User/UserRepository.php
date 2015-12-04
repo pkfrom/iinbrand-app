@@ -43,7 +43,7 @@ class UserRepository {
         $data = [
             'first_name'    => $user->first_name,
             'token'         => $token,
-            'subject'       => 'Example.com: Password Reset Link',
+            'subject'       => 'Password Reset Link',
             'email'         => $user->email
         ];
 

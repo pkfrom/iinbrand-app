@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'url' => 'http://localhost',
+    'url' => env('APP_URL','http://localhost'),
 
     /*
     |--------------------------------------------------------------------------
@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'timezone' => 'Asia/bangkok',
+    'timezone' => 'Asia/Bangkok',
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => env('APP_LOCALE','en'),
 
     /*
     |--------------------------------------------------------------------------
@@ -154,9 +154,10 @@ return [
         Fromz\CrudGenerator\CrudGeneratorServiceProvider::class,
         Fromz\LaravelAdminLte\ServiceProvider::class,
         Mitul\Generator\GeneratorServiceProvider::class,
+        Former\FormerServiceProvider::class,
         //Pingpong\Generators\GeneratorsServiceProvider::class
         //PulkitJalan\GeoIP\GeoIPServiceProvider::class
-        //Pingpong\Trusty\TrustyServiceProvider::class,
+        Chumper\Datatable\DatatableServiceProvider::class,
 
 
     ],
@@ -214,9 +215,14 @@ return [
         'HTML'      => Collective\Html\HtmlFacade::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Module'    => Pingpong\Modules\Facades\Module::class,
+
         'Ekko'      => Laravelista\Ekko\Facades\Ekko::class,
         'Flash'     => Laracasts\Flash\Flash::class,
         //'GeoIP'   => PulkitJalan\GeoIP\Facades\GeoIP::class
+
+        'Former'    => Former\Facades\Former::class,
+        'Datatable' => Chumper\Datatable\Facades\DatatableFacade::class,
+
 
 
     ],

@@ -30,8 +30,11 @@
     "laravelista/ekko": "~1.0",
     "bosnadev/repositories": "dev-master",
     "mitulgolakiya/laravel-api-generator": "dev-master",
-    "pulkitjalan/geoip": "2.*"
-
+    "pulkitjalan/geoip": "2.*",
+    "anahkiasen/former": "4.0.*@dev",
+    "chumper/datatable": "dev-develop",
+    "patricktalmadge/bootstrapper": "~5",
+    "intervention/image": "^2.3"
   },
   "require-dev": {
     "fzaninotto/faker": "~1.4",
