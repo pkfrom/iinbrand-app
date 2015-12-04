@@ -1,5 +1,5 @@
 <?php
-$indicesServer = array('PHP_SELF',
+$indicesServer = array(' PHP_SELF',
         'argv',
         'argc',
         'GATEWAY_INTERFACE',
@@ -21,6 +21,17 @@ $indicesServer = array('PHP_SELF',
         'HTTP_REFERER',
         'HTTP_USER_AGENT',
         'HTTPS',
+
+        'HTTP_CLIENT_IP',
+        'HTTP_FORWARDED',
+        'HTTP_FORWARDED_FOR',
+        'HTTP_X_FORWARDED',
+        'HTTP_X_FORWARDED_FOR',
+        'HTTP_X_FORWARDED_HOST',
+        'HTTP_X_FORWARDED_SERVER',
+        'HTTP_CF_CONNECTING_IP',
+        'HTTP_X_CLUSTER_CLIENT_IP',
+
         'REMOTE_ADDR',
         'REMOTE_HOST',
         'REMOTE_PORT',
@@ -38,15 +49,15 @@ $indicesServer = array('PHP_SELF',
         'PHP_AUTH_PW',
         'AUTH_TYPE',
         'PATH_INFO',
-        'ORIG_PATH_INFO') ;
+        'ORIG_PATH_INFO'
+);
 
-echo '<table cellpadding="10">' ;
+echo '<table cellpadding="10">';
 foreach ($indicesServer as $arg) {
     if (isset($_SERVER[$arg])) {
-        echo '<tr><td>'.$arg.'</td><td>' . $_SERVER[$arg] . '</td></tr>' ;
-    }
-    else {
-        echo '<tr><td>'.$arg.'</td><td>-</td></tr>' ;
+        echo '<tr><td>' . $arg . '</td><td>' . $_SERVER[$arg] . '</td></tr>';
+    } else {
+        echo '<tr><td>' . $arg . '</td><td>-</td></tr>';
     }
 }
-echo '</table>' ;
+echo '</table>';
