@@ -156,8 +156,11 @@ return [
         Mitul\Generator\GeneratorServiceProvider::class,
         Former\FormerServiceProvider::class,
         //Pingpong\Generators\GeneratorsServiceProvider::class
-        //PulkitJalan\GeoIP\GeoIPServiceProvider::class
+        PulkitJalan\GeoIP\GeoIPServiceProvider::class,
+        //Torann\GeoIP\GeoIPServiceProvider::class,
+
         Chumper\Datatable\DatatableServiceProvider::class,
+        Jenssegers\Agent\AgentServiceProvider::class,
 
 
     ],
@@ -218,10 +221,12 @@ return [
 
         'Ekko'      => Laravelista\Ekko\Facades\Ekko::class,
         'Flash'     => Laracasts\Flash\Flash::class,
-        //'GeoIP'   => PulkitJalan\GeoIP\Facades\GeoIP::class
+        'GeoIP'   => PulkitJalan\GeoIP\Facades\GeoIP::class,
+        //'GeoIP'      => Torann\GeoIP\GeoIPFacade::class,
 
         'Former'    => Former\Facades\Former::class,
         'Datatable' => Chumper\Datatable\Facades\DatatableFacade::class,
+        'Agent' => Jenssegers\Agent\Facades\Agent::class,
 
 
 

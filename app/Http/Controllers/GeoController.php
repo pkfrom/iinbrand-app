@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\PrettyJson;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Jenssegers\Agent\Agent;
+use PulkitJalan\GeoIP\Facades\GeoIP;
+
 
 class GeoController extends Controller
 {
@@ -16,7 +20,28 @@ class GeoController extends Controller
      */
     public function index()
     {
-        echo "Hello";
+        $pretty = new PrettyJson();
+/*
+        $setIP = '1.46.41.229 ';
+
+        GeoIP::setIp($setIP);
+
+        $datajson = json_encode(GeoIP::get(), true);
+
+*/
+
+        $server = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        GeoIP::get( $server);
+
+
+        $headers = '';
+        $agent = new Agent();
+
+        $userAgent = $agent->setUserAgent();
+        $userIP =  GeoIP::get();
+
+
+        return $server;//.$userIP;//$pretty->format_json($datajson,true);
     }
 
     /**

@@ -92,11 +92,13 @@ $router->group([
 */
 
 Route::get('/lg', function(){
-    return view('adminex.login');
+    return view('pages.home');
 });
 
 
-
+Route::get('/test', function(){
+    return view('pages.test');
+});
 
 
 Route::get('/geo', 'GeoController@index');
