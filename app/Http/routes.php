@@ -37,8 +37,19 @@ Route::group(['middleware' => 'auth:all'], function()
     Route::get('/logout', ['as' => $a . 'logout', 'uses' => 'Auth\AuthController@getLogout']);
 });
 
-Route::resource('/dashboards', 'DashboardController');
-Route::get('/dashboards/map', 'DashboardController@getMap');
+
+Route::group(['prefix' => 'dashboards'], function()
+{
+    Route::resource('/', 'DashboardController');
+    Route::get('/map', 'DashboardController@getMap');
+
+//Company
+    Route::resource('company', 'CompanyController');
+
+
+
+
+});
 
 /*
 // Blog pages
@@ -80,13 +91,13 @@ $router->group([
 //get('/auth/logout', 'Auth\AuthController@getLogout');
 */
 
-//Route::get('/geo', function(){
+Route::get('/lg', function(){
+    return view('adminex.login');
+});
 
-//});
 
 
 
-Route::resource('company', 'CompanyController');
 
 Route::get('/geo', 'GeoController@index');
 

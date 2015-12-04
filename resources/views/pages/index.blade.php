@@ -16,7 +16,7 @@
 
             <div class="title">iinbrand</div>
             <div class="slogan">Protect you Brand<br>Happy Client & Brand owner.</div>
-            <div class="buttons"><a href="#HOWTOWORK">How to work</a><a href="#">Get Started</a></div>
+            <div class="buttons"><a href="#HOWTOWORK">How to work</a><a href="login">Get Started</a></div>
             <div class="release-info"><a href="#" target="_blank"></a>&nbsp;</div>
             <div class="links"><a href="/scan" target="_blank">Verify Check</a><a href="/login">Client Login</a></div>
         </div>

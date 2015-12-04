@@ -17,7 +17,7 @@
                 <li ><a href="{{ URL::to('dashboards') }}">Dashboard</a></li>
                 @endif
             @endif
-                <li ><a href="{{ URL::to('#') }}">Verify</a></li>
+                <li ><a href="{{ URL::to('scan') }}">Verify</a></li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">

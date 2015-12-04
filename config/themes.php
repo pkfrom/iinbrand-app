@@ -3,6 +3,8 @@
 return [
     'title' => 'iinbrand',
 
+    'footer' => '',
+
     'home' => [
         'img'   => 'themes/home/img/',
         'js'    => 'themes/home/js/',

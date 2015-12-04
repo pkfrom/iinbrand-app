@@ -14,8 +14,6 @@
                  and (-webkit-device-pixel-ratio: 3)
                  and (orientation: portrait)"
           rel="apple-touch-startup-image">
-
-    <base target="_blank" />
     <head>
         <style type="text/css">
             body

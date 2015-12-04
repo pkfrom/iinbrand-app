@@ -16,9 +16,12 @@ class ScanController extends Controller
      */
     public function index()
     {
-       return view('scan.index');
+       return view('scan.home');
     }
-
+    public function scan()
+    {
+        return view('scan.scan');
+    }
     /**
      * Show the form for creating a new resource.
      *

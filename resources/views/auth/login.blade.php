@@ -17,7 +17,9 @@
 
         @include('includes.status')
 
-        <h2 class="form-signin-heading">Please sign in</h2>
+        <div class="form-signin-heading" align="center">
+            <img src="img/logo.svg"style="width:118px;;" alt=""/>
+        </div>
 
         <label for="inputEmail" class="sr-only">Email address</label>
         {!! Form::email('email', null, [
@@ -48,14 +50,15 @@
 
             </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block login-btn" type="submit">Sign in</button>
+        <button class="btn btn-lg btn-success btn-block login-btn" type="submit">
+            <i class="fa fa-check"></i>
+        </button>
         <p><a href="{{ route('auth.password') }}">Forgot password?</a></p>
 
         <p class="or-social">Or Use Social Login</p>
 
-        <a href="{{ route('social.redirect', ['provider' => 'facebook']) }}" class="btn btn-lg btn-primary btn-block facebook" type="submit">Facebook</a>
-        <a href="{{ route('social.redirect', ['provider' => 'twitter']) }}" class="btn btn-lg btn-primary btn-block twitter" type="submit">Twitter</a>
-        <a href="{{ route('social.redirect', ['provider' => 'google']) }}" class="btn btn-lg btn-primary btn-block google" type="submit">Google</a>
+        <a href="{{ route('social.redirect', ['provider' => 'facebook']) }}" class="btn btn-lg btn-primary btn-block facebook" type="submit"> <i class="fa fa-facebook"></i></a>
+        <a href="{{ route('social.redirect', ['provider' => 'google']) }}" class="btn btn-lg btn-primary btn-block google" type="submit"><i class="fa fa-google-plus"></i></a>
 
         {!! Form::close() !!}
 

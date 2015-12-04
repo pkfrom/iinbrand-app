@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{asset('themes/flatly/theme/bootstrap.css')}}" media="screen">
     <link rel="stylesheet" href="{{asset('themes/flatly/theme/usebootstrap.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="{{asset('themes/flatly/bootstrap/html5shiv.js')}}"></script>
