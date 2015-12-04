@@ -3,7 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('css')
-    <link rel="stylesheet" href="{{asset('/vendor/adminlte/plugins/jvectormap/jquery-jvectormap-1.2.2.css')}}"></link>
+    <link rel="stylesheet" href="{{(config('adminlte.plugin').'jvectormap/jquery-jvectormap-1.2.2.css')}}"></link>
 @stop
 
 @section('content_header')
@@ -146,12 +146,12 @@
 
 
 @section('js')
-    <script src="{{asset('/vendor/adminlte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js')}}"></script>
-    <script src="{{asset('/vendor/adminlte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js')}}"></script>
-    <script src="{{asset('/vendor/adminlte/plugins/flot/jquery.flot.min.js')}}"></script>
-    <script src="{{asset('/vendor/adminlte/plugins/flot/jquery.flot.resize.min.js')}}"></script>
-    <script src="{{asset('/vendor/adminlte//plugins/flot/jquery.flot.pie.min.js')}}"></script>
-    <script src="{{asset('/vendor/adminlte/plugins/flot/jquery.flot.categories.min.js')}}"></script>
-    <script src="{{asset('/vendor/adminlte/script/dashboard.js')}}"></script>
+    <script src="{{(config('adminlte.plugin').'jvectormap/jquery-jvectormap-1.2.2.min.js')}}"></script>
+    <script src="{{(config('adminlte.plugin').'jvectormap/jquery-jvectormap-world-mill-en.js')}}"></script>
+    <script src="{{(config('adminlte.plugin').'flot/jquery.flot.min.js')}}"></script>
+    <script src="{{(config('adminlte.plugin').'flot/jquery.flot.resize.min.js')}}"></script>
+    <script src="{{(config('adminlte.plugin').'flot/jquery.flot.pie.min.js')}}"></script>
+    <script src="{{(config('adminlte.plugin').'flot/jquery.flot.categories.min.js')}}"></script>
+    <script src="{{(config('adminlte.dashboard-js'))}}"></script>
 
 @stop

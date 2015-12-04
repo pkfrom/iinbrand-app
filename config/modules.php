@@ -137,10 +137,10 @@ return [
     */
 
     'composer' => [
-        'vendor' => 'fromz-modules',
+        'vendor' => 'pingpong-modules',
         'author' => [
-            'name' => 'Fromz Prajuktar',
-            'email' => 'pkfromz@gmail.com',
+            'name' => 'Pingpong Labs',
+            'email' => 'pingpong.labs@gmail.com',
         ],
     ],
     /*
@@ -153,7 +153,7 @@ return [
     */
     'cache' => [
         'enabled' => false,
-        'key' => 'fromz-modules',
+        'key' => 'pingpong-modules',
         'lifetime' => 60,
     ],
 

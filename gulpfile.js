@@ -96,4 +96,6 @@ elixir(function(mix) {
     // Compile CSS
     mix.less('admin.less', 'public/assets/css/admin.css');
     mix.less('blog.less', 'public/assets/css/blog.css');
+    mix.less('bootswatch.less', 'public/themes/home/css/bootswatch.css');
+
 });
