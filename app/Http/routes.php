@@ -95,9 +95,12 @@ Route::get('/lg', function(){
     return view('pages.home');
 });
 
+Route::get('/info', function(){
+    return view('pages.test');
+});
 
 Route::get('/test', function(){
-    return view('pages.test');
+    return view('dashboard');
 });
 
 

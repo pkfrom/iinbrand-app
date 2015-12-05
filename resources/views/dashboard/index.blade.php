@@ -3,7 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('css')
-    <link rel="stylesheet" href="{{(config('adminlte.plugin').'jvectormap/jquery-jvectormap-1.2.2.css')}}"></link>
+    <link rel="stylesheet" href="{{(config('adminlte.plugin').'jvectormap/jquery-jvectormap-1.2.2.css')}}">
 @stop
 
 @section('content_header')

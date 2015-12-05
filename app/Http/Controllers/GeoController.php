@@ -30,8 +30,8 @@ class GeoController extends Controller
 
 */
 
-        $server = $_SERVER['HTTP_X_FORWARDED_FOR'];
-        GeoIP::get( $server);
+        //$server = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        GeoIP::get( );
 
 
         $headers = '';
@@ -41,7 +41,10 @@ class GeoController extends Controller
         $userIP =  GeoIP::get();
 
 
-        return $server;//.$userIP;//$pretty->format_json($datajson,true);
+        $isDesktop = json_decode($agent->isDesktop());
+        $device = $agent->getUserAgent();//device();
+
+        return $pretty->format_json($userAgent,true);
     }
 
     /**

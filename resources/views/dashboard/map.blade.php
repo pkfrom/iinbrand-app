@@ -1,33 +1,43 @@
 @extends('adminlte::page')
 
-@section('title', 'Map')
+@section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Map Report</h1>
+    <h1>Dashboard</h1>
 @stop
 
-@section('content_header')
-<script
-        src="http://maps.googleapis.com/maps/api/js">
-</script>
-
-<script>
-    function initialize() {
-        var mapProp = {
-            center:new google.maps.LatLng(51.508742,-0.120850),
-            zoom:5,
-            mapTypeId:google.maps.MapTypeId.ROADMAP
-        };
-        var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);
-</script>
+@section('css')
+    <link rel="stylesheet" href="{{(config('adminlte.plugin').'jvectormap/jquery-jvectormap-1.2.2.css')}}"/>
 @stop
 
 @section('content')
+    <p>Welcome to this beautiful admin panel.</p>
+    <div class="row">
 
-    <div id="googleMap" style="width:500px;height:380px;"></div>
+        <div class="col-md-12">
+            <!-- MAP & BOX PANE -->
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <i class="fa fa-map-marker"></i>
+                    <h3 class="box-title">Map Report</h3>
+                    <div class="box-tools pull-right">
+                        <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
 
+                    </div>
+                </div><!-- /.box-header -->
+                <div class="box-body no-padding">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="pad">
+                                <!-- Map will be created here -->
+                                <div id="world-map-markers" style="height: 300px;"></div>
+                            </div>
+                        </div><!-- /.col -->
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.box-body -->
+        </div><!-- /.box -->
+    </div>
 @stop
 
 @section('css')
@@ -35,5 +45,11 @@
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+    <script src="{{(config('adminlte.plugin').'jvectormap/jquery-jvectormap-1.2.2.min.js')}}"></script>
+    <script src="{{(config('adminlte.plugin').'jvectormap/jquery-jvectormap-world-mill-en.js')}}"></script>
+    <script src="{{(config('adminlte.plugin').'flot/jquery.flot.min.js')}}"></script>
+    <script src="{{(config('adminlte.plugin').'flot/jquery.flot.resize.min.js')}}"></script>
+    <script src="{{(config('adminlte.plugin').'flot/jquery.flot.pie.min.js')}}"></script>
+    <script src="{{(config('adminlte.plugin').'flot/jquery.flot.categories.min.js')}}"></script>
+    <script src="{{(config('adminlte.dashboard-js'))}}"></script>
 @stop

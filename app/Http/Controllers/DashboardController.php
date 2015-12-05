@@ -31,8 +31,7 @@ class DashboardController extends Controller
 
     public function getMap()
     {
-        //return view('dashboard.map');
-        echo "MAP";
+        return view('dashboard.map');
     }
     /**
      * Show the form for creating a new resource.
