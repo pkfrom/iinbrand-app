@@ -55,7 +55,8 @@
             </form>
 
             @if (config('adminlte.register_url'))
-            <a href="{{ url(config('adminlte.register_url')) }}" class="text-center">{{ trans('adminlte::adminlte.register_a_new_membership') }}</a>
+                <a href="{{ url(config('adminlte.register_url')) }}"
+                   class="text-center">{{ trans('adminlte::adminlte.register_a_new_membership') }}</a>
             @endif
 
         </div>

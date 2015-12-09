@@ -4,6 +4,6 @@ class AdminController extends Controller {
 
     public function getHome()
     {
-        return view('panels.admin.home');
+        return redirect('dashboards');//->route('dashboards');//"555";//view('blog.admin.post');//view(route('blog.admin.post'));//view('dashboard.index');
     }
 }

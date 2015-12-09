@@ -1,0 +1,21 @@
+{
+  "name": "fromz/l5scaffold",
+  "description": "Extend Laravel 5 generators scaffold.",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Fromz Prajuktar",
+      "email": "pkfromz@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "illuminate/support": "~5.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Fromz\\L5scaffold\\": "src/"
+    }
+  }
+}

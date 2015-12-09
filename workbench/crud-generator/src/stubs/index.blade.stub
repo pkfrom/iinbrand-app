@@ -1,15 +1,27 @@
 @extends('adminlte::page')
 
-@section('title', ' | %%crudNamePluralCap%%')
+@section('title', ' | %%crudNameCap%%')
+
+@section('content_header')
+<div class="page-header clearfix">
+    <i class="fa fa-check-circle"></i> %%crudNameCap%%
+    <a href="{{ route('%%crudName%%.create') }}" class="btn btn-primary pull-right"style="margin-bottom: 5px;"><i class="fa fa-plus"></i> Add %%crudNameCap%%</a>
+</div>
+@stop
 
 @section('content')
-
-    <h1>%%crudNamePluralCap%% <a href="{{ route('%%crudName%%.create') }}" class="btn btn-primary pull-right btn-sm">Add New %%crudNameCap%%</a></h1>
-    <div class="table">
-        <table class="table table-bordered table-striped table-hover">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box box-primary">
+                <div class="box-header">
+                    <h3 class="box-title">All %%crudNamePluralCap%%</h3>
+                </div>
+                 <div class="box-body">
+                 <table id="dataex" class="table table-bordered table-striped table-hover">
             <thead>
                 <tr>
-                    <th>S.No</th>%%formHeadingHtml%%<th>Actions</th>
+                    <th>#</th>%%formHeadingHtml%%
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -35,7 +47,27 @@
             @endforeach
             </tbody>
         </table>
-        <div class="pagination"> {!! $%%crudNamePlural%%->render() !!} </div>
+
+            </div>
+        </div>
     </div>
+</div>
 
 @endsection
+
+@section('js')
+    <script src="{{(config('adminlte.plugin').'datatables/jquery.dataTables.min.js')}}"></script>
+    <script src="{{(config('adminlte.plugin').'datatables/dataTables.bootstrap.min.js')}}"></script>
+    <script>
+        $(function () {
+            $('#dataex').DataTable({
+                "paging": true,
+                "lengthChange": true,
+                "searching": true,
+                "ordering": true,
+                "info": true,
+                "autoWidth": true
+            });
+        });
+    </script>
+@stop

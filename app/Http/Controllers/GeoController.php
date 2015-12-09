@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\PrettyJson;
+use Fromz\FromzPackage\FromzJson;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -20,7 +20,7 @@ class GeoController extends Controller
      */
     public function index()
     {
-        $pretty = new PrettyJson();
+        $pretty = new FromzJson();
 /*
         $setIP = '1.46.41.229 ';
 

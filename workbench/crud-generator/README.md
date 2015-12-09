@@ -104,6 +104,7 @@ If you chose not to add the crud route in automatically (see above), you will ne
 ```php
 Route::resource('person', 'PersonController');
 ```
+php artisan crud:generate Company --fields="name:string, detail:text, status:boolean" --pk=id
 
 ### Supported Field Types
 

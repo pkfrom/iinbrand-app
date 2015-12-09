@@ -1,15 +1,27 @@
 @extends('adminlte::page')
 
-@section('title', ' | Companies')
+@section('title', ' | Company')
+
+@section('content_header')
+<div class="page-header clearfix">
+    <i class="fa fa-check-circle"></i> Company
+    <a href="{{ route('company.create') }}" class="btn btn-primary pull-right"style="margin-bottom: 5px;"><i class="fa fa-plus"></i> Add Company</a>
+</div>
+@stop
 
 @section('content')
-
-    <h1>Companies <a href="{{ route('company.create') }}" class="btn btn-primary pull-right btn-sm">Add New Company</a></h1>
-    <div class="table">
-        <table class="table table-bordered table-striped table-hover">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box box-primary">
+                <div class="box-header">
+                    <h3 class="box-title">All Companies</h3>
+                </div>
+                 <div class="box-body">
+                 <table id="dataex" class="table table-bordered table-striped table-hover">
             <thead>
                 <tr>
-                    <th>No.</th><th>Name</th><th>Detail</th><th>Active</th><th>Actions</th>
+                    <th>#</th><th>Name</th><th>Detail</th><th>Status</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -18,7 +30,7 @@
                 {{-- */$x++;/* --}}
                 <tr>
                     <td>{{ $x }}</td>
-                    <td><a href="{{ url('/company', $item->id) }}">{{ $item->name }}</a></td><td>{{ $item->detail }}</td><td>{{ $item->active }}</td>
+                    <td><a href="{{ url('/company', $item->id) }}">{{ $item->name }}</a></td><td>{{ $item->detail }}</td><td>{{ $item->status }}</td>
                     <td>
                         <a href="{{ route('company.edit', $item->id) }}">
                             <button type="submit" class="btn btn-primary btn-xs">Update</button>
@@ -35,7 +47,27 @@
             @endforeach
             </tbody>
         </table>
-        <div class="pagination"> {!! $companies->render() !!} </div>
+
+            </div>
+        </div>
     </div>
+</div>
 
 @endsection
+
+@section('js')
+    <script src="{{(config('adminlte.plugin').'datatables/jquery.dataTables.min.js')}}"></script>
+    <script src="{{(config('adminlte.plugin').'datatables/dataTables.bootstrap.min.js')}}"></script>
+    <script>
+        $(function () {
+            $('#dataex').DataTable({
+                "paging": true,
+                "lengthChange": true,
+                "searching": true,
+                "ordering": true,
+                "info": true,
+                "autoWidth": true
+            });
+        });
+    </script>
+@stop

@@ -20,7 +20,8 @@ class DummyClass extends Controller
      */
     public function index()
     {
-        ${{crudNamePlural}} = {{crudNameCap}}::paginate(15);
+        //${{crudNamePlural}} = {{crudNameCap}}::paginate(15);
+        ${{crudNamePlural}} = {{crudNameCap}}::all();
 
         return view('{{viewPath}}{{crudName}}.index', compact('{{crudNamePlural}}'));
     }

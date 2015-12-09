@@ -76,6 +76,11 @@ class AuthController extends Controller {
         return view('auth.register');
     }
 
+    public function getRegister2()
+    {
+        return view('adminlte::register');
+    }
+
     public function postRegister()
     {
         $input = Input::all();

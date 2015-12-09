@@ -4,6 +4,6 @@ class UserController extends Controller {
 
     public function getHome()
     {
-        return view('panels.user.home');
+        return redirect('dashboards');//view('panels.user.home');
     }
 }

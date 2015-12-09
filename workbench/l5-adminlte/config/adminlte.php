@@ -30,7 +30,7 @@ return [
 
     'logo_mini' => '<b>E</b>DC',
 
-    'version' => 'v.0.11.27',
+    'version' => 'v.0.3.1',
 
     /*
     |--------------------------------------------------------------------------
@@ -108,27 +108,27 @@ return [
         [
             'treeview' => 'report',
             'text'     => ' Report',
-            'url'      => '#',
+            'url'      => 'report',
             'icon'     => 'bar-chart',
         ],
         'DATA MANAGER',
         [
             'treeview' => 'company',
             'text'     => ' Company',
-            'url'      => '#',
-            'icon'     => 'company',
+            'url'      => 'company',
+            'icon'     => 'circle-o',
         ],
         [
             'treeview' => 'product',
             'text'     => ' Product',
-            'url'      => '#',
+            'url'      => 'product',
             'icon'     => 'cubes',
         ],
-        'ACCOUNT SETTINGS',
+        'SETTINGS',
         [
             'treeview' => '',
             'text'     => ' Profile',
-            'url'      => 'admin/settings',
+            'url'      => '#',
             'icon'     => 'user',
         ],
         [
@@ -142,7 +142,7 @@ return [
         [
             'menu' => 'report',
             'text' => ' Map Report',
-            'url'  => 'dashboards/map',
+            'url'  => 'dashboards/report/map',
             'icon' => 'map-marker',
         ], [
             'menu' => 'report',
@@ -156,29 +156,19 @@ return [
             'url'  => 'company',
             'icon' => 'lock',
         ],
-        [
-            'menu' => 'company',
-            'text' => ' Create',
-            'url'  => 'company/create',
-            'icon' => 'lock',
-        ],
-        [
-            'menu' => 'company',
-            'text' => ' List',
-            'url'  => 'company',
-            'icon' => 'lock',
-        ],
-        [
-            'menu' => 'company',
-            'text' => ' List',
-            'url'  => 'company',
-            'icon' => 'lock',
-        ],
+
         [
             'menu' => 'product',
             'text' => ' List',
-            'url'  => 'product',
+            'url'  => 'products',
             'icon' => 'cube',
         ],
+        [
+            'menu' => 'product',
+            'text' => ' Add',
+            'url'  => 'products/create',
+            'icon' => 'lock',
+        ],
+
     ],
 ];

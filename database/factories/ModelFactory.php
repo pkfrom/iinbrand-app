@@ -20,7 +20,7 @@ $factory->define(App\User::class, function ($faker) {
     ];
 });
 
-$factory->define(App\Post::class, function ($faker) {
+$factory->define(App\Models\Post::class, function ($faker) {
     $images = ['about-bg.jpg', 'contact-bg.jpg', 'home-bg.jpg', 'post-bg.jpg'];
     $title = $faker->sentence(mt_rand(3, 10));
     return [
@@ -34,7 +34,7 @@ $factory->define(App\Post::class, function ($faker) {
     ];
 });
 
-$factory->define(App\Tag::class, function ($faker) {
+$factory->define(App\Models\Tag::class, function ($faker) {
     $images = ['about-bg.jpg', 'contact-bg.jpg', 'home-bg.jpg', 'post-bg.jpg'];
     $word = $faker->word;
     return [
@@ -44,5 +44,24 @@ $factory->define(App\Tag::class, function ($faker) {
         'page_image' => $images[mt_rand(0, 3)],
         'meta_description' => "Meta for $word",
         'reverse_direction' => false,
+    ];
+});
+
+$factory->define(App\Person::class, function ($faker) {
+    return [
+        'name' => $faker->name,
+        'email' => $faker->email,
+        'message' => $faker->sentence,
+
+    ];
+});
+
+$factory->define(App\Product::class, function ($faker) {
+    return [
+        'company_id' => rand(1,10),
+        'name' => $faker->name,
+        'detail' => $faker->sentence,
+        'activate' => '1'
+
     ];
 });

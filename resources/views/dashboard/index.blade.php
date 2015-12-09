@@ -7,7 +7,7 @@
 @stop
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1><i class="fa fa-dashboard"></i> Dashboard</h1>
 @stop
 
 @section('content')

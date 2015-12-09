@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TagCreateRequest;
 use App\Http\Requests\TagUpdateRequest;
-use App\Tag;
+use App\Models\Tag;
 
 class TagController extends Controller
 {
@@ -26,7 +26,7 @@ class TagController extends Controller
     {
         $tags = Tag::all();
 
-        return view('admin.tag.index')
+        return view('blog.admin.tag.index')
             ->withTags($tags);
     }
 
@@ -40,7 +40,7 @@ class TagController extends Controller
             $data[$field] = old($field, $default);
         }
 
-        return view('admin.tag.create', $data);
+        return view('blog.admin.tag.create', $data);
     }
 
     /**
@@ -57,7 +57,7 @@ class TagController extends Controller
         }
         $tag->save();
 
-        return redirect('/admin/tag')
+        return redirect('blog/admin/tag')
             ->withSuccess("The tag '$tag->tag' was created.");
     }
 
@@ -75,7 +75,7 @@ class TagController extends Controller
             $data[$field] = old($field, $tag->$field);
         }
 
-        return view('admin.tag.edit', $data);
+        return view('blog.admin.tag.edit', $data);
     }
 
     /**
@@ -94,7 +94,7 @@ class TagController extends Controller
         }
         $tag->save();
 
-        return redirect("/admin/tag/$id/edit")
+        return redirect("/blog/admin/tag/$id/edit")
             ->withSuccess("Changes saved.");
     }
 
@@ -109,7 +109,7 @@ class TagController extends Controller
         $tag = Tag::findOrFail($id);
         $tag->delete();
 
-        return redirect('/admin/tag')
+        return redirect('blog/admin/tag')
             ->withSuccess("The '$tag->tag' tag has been deleted.");
     }
 }

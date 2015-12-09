@@ -7,7 +7,7 @@ use App\Http\Requests;
 use App\Http\Requests\PostCreateRequest;
 use App\Http\Requests\PostUpdateRequest;
 use App\Http\Controllers\Controller;
-use App\Post;
+use App\Models\Post;
 
 class PostController extends Controller
 {
@@ -16,7 +16,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('admin.post.index')
+        return view('blog.admin.post.index')
             ->withPosts(Post::all());
     }
 
@@ -27,7 +27,7 @@ class PostController extends Controller
     {
         $data = $this->dispatch(new PostFormFields());
 
-        return view('admin.post.create', $data);
+        return view('blog.admin.post.create', $data);
     }
 
     /**
@@ -41,7 +41,7 @@ class PostController extends Controller
         $post->syncTags($request->get('tags', []));
 
         return redirect()
-            ->route('admin.post.index')
+            ->route('blog.admin.post.index')
             ->withSuccess('New Post Successfully Created.');
     }
 
@@ -55,7 +55,7 @@ class PostController extends Controller
     {
         $data = $this->dispatch(new PostFormFields($id));
 
-        return view('admin.post.edit', $data);
+        return view('blog.admin.post.edit', $data);
     }
 
     /**
@@ -78,7 +78,7 @@ class PostController extends Controller
         }
 
         return redirect()
-            ->route('admin.post.index')
+            ->route('blog.admin.post.index')
             ->withSuccess('Post saved.');
     }
 
@@ -95,7 +95,7 @@ class PostController extends Controller
         $post->delete();
 
         return redirect()
-            ->route('admin.post.index')
+            ->route('blog.admin.post.index')
             ->withSuccess('Post deleted.');
     }
 }

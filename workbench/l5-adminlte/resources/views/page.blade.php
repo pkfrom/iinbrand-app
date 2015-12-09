@@ -56,19 +56,21 @@
                         @else
 
                             @if ($item['treeview'])
-                                <li class="treeview">
+                                <li class="treeview {{ Ekko::isActiveMatch($item['url']) }}">
                                     <a href="#"><i class='fa fa-{{ $item['icon'] or 'circle-o' }}'></i> <span>{{ $item['text'] }}</span> <i class="fa fa-angle-left pull-right"></i></a>
                                     <ul class="treeview-menu">
                                         @foreach( config('adminlte.child',[])as $child)
                                             @if ($child['menu'] == $item['treeview'])
-                                        <li><a href="{{ url($child['url']) }}"><i class='fa fa-{{ $child['icon'] or 'circle-o' }}'></i>{{ $child['text'] }}</a></li>
+                                        <li class="{{ Ekko::isActiveURL($child['url']) }}">
+                                            <a href="{{ url($child['url']) }}"><i class='fa fa-{{ $child['icon'] or 'circle-o' }}'></i>{{ $child['text'] }}</a>
+                                        </li>
                                             @endif
                                         @endforeach
 
                                     </ul>
                                 </li>
                             @else
-                            <li>
+                            <li class="{{ Ekko::isActiveURL($item['url']) }}">
                                 <a href="{{ url($item['url']) }}">
                                     <i class="fa fa-fw fa-{{ $item['icon'] or 'circle-o' }}"></i>
                                     <span>{{ $item['text'] }}</span>

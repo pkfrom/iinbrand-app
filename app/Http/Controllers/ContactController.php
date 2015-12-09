@@ -37,3 +37,4 @@ class ContactController extends Controller
             ->withSuccess("Thank you for your message. It has been sent.");
     }
 }
+

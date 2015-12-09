@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Datatable;
+use App\Models\User;
 
 class DashboardController extends Controller
 {
@@ -38,6 +40,16 @@ class DashboardController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function getStart()
+    {
+        return view('dashboard.start');
+    }
+
+    public function getRegister()
+    {
+        return view('adminlte::register');
+    }
+
     public function create()
     {
         //
@@ -97,5 +109,16 @@ class DashboardController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function getDatatable()
+    {
+        $datatable = Datatable::collection(User::all(array('id','first_name')))
+            ->showColumns('id', 'first_name')
+            ->searchColumns('first_name')
+            ->orderColumns('id','first_name')
+            ->make();
+
+        return $datatable;
     }
 }

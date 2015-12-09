@@ -146,19 +146,19 @@ return [
         App\Providers\RouteServiceProvider::class,
         //Illuminate\Html\HtmlServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
-        Fromz\L5scaffold\GeneratorsServiceProvider::class,
-        Pingpong\Modules\ModulesServiceProvider::class,
-        Laravelista\Ekko\EkkoServiceProvider::class,
-        Laracasts\Flash\FlashServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        Fromz\FromzPackage\FromzPackageServiceProvider::class,
         Fromz\CrudGenerator\CrudGeneratorServiceProvider::class,
         Fromz\LaravelAdminLte\ServiceProvider::class,
+
+        Laravelista\Ekko\EkkoServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
+        Pingpong\Modules\ModulesServiceProvider::class,
         Mitul\Generator\GeneratorServiceProvider::class,
         Former\FormerServiceProvider::class,
-        //Pingpong\Generators\GeneratorsServiceProvider::class
         PulkitJalan\GeoIP\GeoIPServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
         //Torann\GeoIP\GeoIPServiceProvider::class,
-
         Chumper\Datatable\DatatableServiceProvider::class,
         Jenssegers\Agent\AgentServiceProvider::class,
 
@@ -221,14 +221,13 @@ return [
 
         'Ekko'      => Laravelista\Ekko\Facades\Ekko::class,
         'Flash'     => Laracasts\Flash\Flash::class,
-        'GeoIP'   => PulkitJalan\GeoIP\Facades\GeoIP::class,
+        'GeoIP'     => PulkitJalan\GeoIP\Facades\GeoIP::class,
         //'GeoIP'      => Torann\GeoIP\GeoIPFacade::class,
 
         'Former'    => Former\Facades\Former::class,
         'Datatable' => Chumper\Datatable\Facades\DatatableFacade::class,
-        'Agent' => Jenssegers\Agent\Facades\Agent::class,
-
-
+        'Agent'     => Jenssegers\Agent\Facades\Agent::class,
+        'Image'     => Intervention\Image\Facades\Image::class,
 
     ],
 

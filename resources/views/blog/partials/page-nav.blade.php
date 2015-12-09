@@ -22,7 +22,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <a href="/contact">Contact</a>
+          <a href="blog/contact">Contact</a>
         </li>
       </ul>
     </div>

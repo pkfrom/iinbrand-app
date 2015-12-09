@@ -1,3 +1,4 @@
+```
 +--------+----------+----------------------------+----------------------+-------------------------------------------------------------------------+--------------------+
 | Domain | Method   | URI                        | Name                 | Action                                                                  | Middleware         |
 +--------+----------+----------------------------+----------------------+-------------------------------------------------------------------------+--------------------+
@@ -22,3 +23,9 @@
 |        | GET|HEAD | social/redirect/{provider} | social.redirect      | App\Http\Controllers\Auth\AuthController@getSocialRedirect              |                    |
 |        | GET|HEAD | user                       | user.home            | App\Http\Controllers\UserController@getHome                             | auth:user          |
 +--------+----------+----------------------------+----------------------+-------------------------------------------------------------------------+--------------------+
+```
+
+
+```bash
+php artisan crud:generate Company --fields="name:string, detail:text, status:boolean" --pk=id
+```
