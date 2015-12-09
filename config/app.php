@@ -147,7 +147,7 @@ return [
         //Illuminate\Html\HtmlServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
-        Fromz\FromzPackage\FromzPackageServiceProvider::class,
+        Fromz\FromzPackage\Providers\FromzPackageServiceProvider::class,
         Fromz\CrudGenerator\CrudGeneratorServiceProvider::class,
         Fromz\LaravelAdminLte\ServiceProvider::class,
 
@@ -161,6 +161,7 @@ return [
         //Torann\GeoIP\GeoIPServiceProvider::class,
         Chumper\Datatable\DatatableServiceProvider::class,
         Jenssegers\Agent\AgentServiceProvider::class,
+
 
 
     ],

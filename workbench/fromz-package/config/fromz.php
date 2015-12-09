@@ -1,10 +1,10 @@
 <?php return [
-    
+
     /*
     |--------------------------------------------------------------------------
     | Package Configuration Option
     |--------------------------------------------------------------------------
-    | Describe what it does. 
+    | Describe what it does.
     */
 
     'tag_manager_key' => env('TAG_MANAGER_KEY',null),

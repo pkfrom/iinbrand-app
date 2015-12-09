@@ -24,6 +24,8 @@
 </head>
 <body class="hold-transition @yield('body_class')">
 
+@include('fromz::tagmanager')
+
 @yield('body')
 
 

@@ -162,9 +162,6 @@ Route::get('/geo', 'GeoController@index');
 Route::resource("products","ProductController");
 Route::resource('person', 'PersonController');
 Route::resource('company', 'CompanyController');
-Route::resource('company', 'CompanyController');
-Route::resource('company', 'CompanyController');
-Route::resource('company', 'CompanyController');
-Route::resource('company', 'CompanyController');
-Route::resource('company', 'CompanyController');
-Route::resource('company', 'CompanyController');
+
+Route::get('/rest', 'DashboardController@postRest');
+

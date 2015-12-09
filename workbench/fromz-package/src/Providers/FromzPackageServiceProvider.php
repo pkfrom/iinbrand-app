@@ -1,6 +1,6 @@
 <?php
 
-namespace Fromz\FromzPackage;
+namespace Fromz\FromzPackage\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -30,7 +30,7 @@ class FromzPackageServiceProvider extends ServiceProvider
 
         // Loading routes
         if (!$this->app->routesAreCached()) {
-            require __DIR__ . '/routes.php';
+            require __DIR__ . '/../routes.php';
         }
 
         // Publishing public assets
@@ -38,26 +38,26 @@ class FromzPackageServiceProvider extends ServiceProvider
 
         // Publishing migrations
         $this->publishes([
-            __DIR__ . '/migrations' => database_path('/migrations'),
+            __DIR__ . '/../migrations' => database_path('/migrations'),
         ], 'migrations');
 
         // Publishing seeds
         $this->publishes([
-            __DIR__ . '/seeds' => database_path('/seeds'),
+            __DIR__ . '/../seeds' => database_path('/seeds'),
         ], 'migrations');
 
     }
 
     private function loadViews()
     {
-        $viewsPath = __DIR__ . '/views';
+        $viewsPath = __DIR__ . '/../views';
 
         $this->loadViewsFrom($viewsPath, 'fromz');
     }
 
     private function publishView()
     {
-        $viewsPath = __DIR__ . '/views';
+        $viewsPath = __DIR__ . '/../views';
         $this->publishes([
             $viewsPath => base_path('resources/views/vendor/fromz'),
         ], 'views');
@@ -65,7 +65,7 @@ class FromzPackageServiceProvider extends ServiceProvider
 
     private function publishConfig()
     {
-        $configPath = __DIR__ . '/config/config.php';//$this->packagePath('config/config.php');
+        $configPath = __DIR__ . '/../../config/fromz.php';//$this->packagePath('config/config.php');
         $this->publishes([
             $configPath => config_path('fromz.php'),
         ], 'config');
@@ -75,7 +75,7 @@ class FromzPackageServiceProvider extends ServiceProvider
 
     private function loadTranslations()
     {
-        $translationsPath = __DIR__ . '/lang';//$this->packagePath('resources/lang');
+        $translationsPath = __DIR__ . '/../lang';//$this->packagePath('resources/lang');
         $this->loadTranslationsFrom($translationsPath, 'fromz');
 
         $this->publishes([
@@ -86,7 +86,7 @@ class FromzPackageServiceProvider extends ServiceProvider
     private function publishAssets()
     {
         $this->publishes([
-            __DIR__ . '/assets' => public_path('fromz'),
+            __DIR__ . '/../assets' => public_path('fromz'),
         ], 'assets');
     }
 

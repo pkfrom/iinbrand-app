@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Datatable;
 use App\Models\User;
+use GuzzleHttp\Client;
 
 class DashboardController extends Controller
 {
@@ -44,7 +45,20 @@ class DashboardController extends Controller
     {
         return view('dashboard.start');
     }
+    public function postRest()
+    {
+        $client = new Client();
+        $response = $client->post('https://api.iinbrand.com/service/',
+                $body = [
+                    'keys' => 'VKSD-TB6Y-R2FB-AYH8',
+                    'location' => '12.3456,00.111111'
+                ]
 
+        );
+        $body = $response->send();
+        $content = view('pages.info')->with('service',json_decode($body, TRUE));
+        return view($content, 'service OK');
+    }
     public function getRegister()
     {
         return view('adminlte::register');

@@ -72,6 +72,7 @@ echo '</table>';
 
 echo '<div align="center"><h1>SERVER</h1></div>';
         $server = json_encode($_SERVER);
+    //echo  Response::json(json_encode($_SERVER),200, array(), JSON_PRETTY_PRINT);
 echo $pretty->format_json($server,true);
 
 echo "<div align='center'><h1>Image</h1></div>";
