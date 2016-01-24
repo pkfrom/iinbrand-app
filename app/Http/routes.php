@@ -163,5 +163,31 @@ Route::resource("products","ProductController");
 Route::resource('person', 'PersonController');
 Route::resource('company', 'CompanyController');
 
-Route::get('/rest', 'DashboardController@postRest');
+Route::get('/rest', function() {
 
+    $client = new GuzzleHttp\Client([
+        // Base URI is used with relative requests
+        'base_uri' => 'https://api.iinbrand.com/service/',
+        // You can set any number of default request options.
+        //'timeout'  => 2.0,
+        //'debug'    => true
+    ]);
+    
+    //$client = new GuzzleHttp\Client('https://api.iinbrand.com/service/');
+
+    $body = [
+        'keys'    => 'VKSD-TB6Y-R2FB-AYH8',
+        'location' => '12.3456,00.111111'
+    ];
+
+    $url = 'https://api.iinbrand.com/service/';
+
+
+        $response = $client->request('POST', $client['base_uri'] ,[ 'body' => json_encode($body,true)]);
+
+    $result = $response->getBody();
+
+    return $result;
+});
+
+Route::get('/rests', 'DashboardController@getRest');

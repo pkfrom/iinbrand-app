@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use Datatable;
 use App\Models\User;
 use GuzzleHttp\Client;
+use Fromz\FromzPackage\FromzJson;
 
 class DashboardController extends Controller
 {
@@ -59,6 +60,38 @@ class DashboardController extends Controller
         $content = view('pages.info')->with('service',json_decode($body, TRUE));
         return view($content, 'service OK');
     }
+    
+    
+    public function getRest() {
+
+        $url = 'https://api.iinbrand.com/service/';
+        $body = [
+            'keys'    => 'VKSD-TB6Y-R2FB-AYH8',
+            'location' => '12.3456,00.111111'
+        ];
+		$fromzJson = new FromzJson();
+        $client = new Client([
+             'base_uri' => $url,
+            //'timeout'  => 2.0,
+            //'debug'    => true
+        ]);
+
+        $response = $client->request('POST', $url ,[ 'body' => json_encode($body,true)]);
+
+        $result = $response->getBody();
+        
+        $code = $response->getStatusCode();
+        
+        $output = [
+        	'data' => json_decode($result),
+        	'statuscode' => $code
+        	];
+
+        return $fromzJson->format_json(json_encode($output),true);
+    }
+    
+    
+    
     public function getRegister()
     {
         return view('adminlte::register');
