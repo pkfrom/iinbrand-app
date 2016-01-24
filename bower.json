@@ -1,0 +1,20 @@
+{
+  "name": "app-iinbrand",
+  "authors": [
+    "Fromz Prajuktar <pkfromz@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "http://github.com/iinbrand",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/bower_dl/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+
+  }
+}
