@@ -28,7 +28,6 @@
     "laracasts/flash": "~1.3",
     "laravelista/ekko": "~1.0",
     "bosnadev/repositories": "dev-master",
-    "laravelcollective/html": "~5.1",
     "mitulgolakiya/laravel-api-generator": "1.4.x-dev",
     "pulkitjalan/geoip": "2.*",
     "torann/geoip": "0.2.*@dev",
